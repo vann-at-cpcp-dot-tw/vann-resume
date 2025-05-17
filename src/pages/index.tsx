@@ -63,7 +63,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Hi there! I\'m Vann a software developer.">
+      description="Hi there! I'm Vann a software developer.">
 
       <div className="relative mx-auto" style={{maxWidth:'680px'}}>
 
