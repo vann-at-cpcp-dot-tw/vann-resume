@@ -113,7 +113,7 @@ export default function Home(): ReactNode {
           jobTitle="前端技術總監"
           companyName="JGB Smart Property"
           jobTime="2020年2月 - "
-          description="加入 SaaS 智慧租賃管理平台，管理 5 - 10 人團隊，一手建立整個產品的前端架構，在產品的開發與運營期間，並不止步於一開始所選擇的技術，持續關注並積極導入最新前端技術如 Vite、SSR、TypeScript、TailwindCSS...等，持續優化團隊的開發體驗" />
+          description="加入 SaaS 智慧租賃管理平台，管理 5 - 10 人團隊，一手建立整個產品的前端架構，在產品的開發與運營期間，並不止步於一開始所選擇的技術，不斷關注並積極導入最新前端技術如 Vite、SSR、TypeScript、TailwindCSS...等，持續優化團隊的開發體驗" />
 
           <WorkBlock
           className="mb-8"
