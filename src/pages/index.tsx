@@ -58,6 +58,10 @@ function SchoolBlock(props) {
   </div>
 }
 
+function Skill(props){
+  return <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">{props?.name}</div>
+}
+
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext()
   return (
@@ -79,7 +83,7 @@ export default function Home(): ReactNode {
                 style={{ textIndent: '-4px', marginBottom: '4px' }}>
                 Vann Liu
                 </Heading>
-                <div className="mb-2">我從 2014 開始從事網頁應用程式開發，累積了超過 10 年的網頁工程相關工作經驗，從接案到 SaaS，製作過的專案類型豐富，包括「形象官網」、「互動遊戲」、「電商平台」、「CRM 管理系統」...等皆有涉獵，雖然主力是做前端，但是對於後端和資料庫亦有相當地了解，不少專案皆以 Full Stack 獨立完成，也熟悉 DevOps 的流程與 CI/CD 的實作。</div>
+                <div className="mb-2">我從 2014 開始從事網頁應用程式開發，累積了超過 10 年的網頁工程相關工作經驗，職業生涯從創業接案到進入 SaaS 團隊服務，製作過的專案類型豐富，包括「形象官網」、「互動遊戲」、「電商平台」、「CRM 管理系統」...等皆有涉獵，雖然主力是做前端，但是對於後端和資料庫亦有相當地了解，不少專案皆以 Full Stack 獨立完成，熟悉 WordPress 客製化、前後端分離的 Headless WordPress 設計，也熟悉 DevOps 的流程與 CI/CD 的實作。</div>
                 <div className="flex flex-wrap sm:gap-2 gap-1">
                   <div className="flex-none flex flex-nowrap">
                     <i className="bi bi-geo-alt-fill flex-none"></i>
@@ -118,7 +122,7 @@ export default function Home(): ReactNode {
           jobTitle="全端工程師"
           companyName="結晶計劃設計工作室"
           jobTime="2016 年 1 月 - 2020 年 1 月"
-          description="自行創業成立工作室，開始以 Full Stack 獨立完成前後端程式以及部署，合作品牌與廠商包括：商業周刊、台積電、文曄科技、勤美誠品綠園道、金典綠園道、得正、一芳水果茶、嘉鴻遊艇...等，專案類型豐富" />
+          description="自行創業成立工作室，開始以 Full Stack 獨立完成前後端程式以及部署，合作品牌與廠商包括：商業周刊、台積電、文曄科技、勤美誠品綠園道、金典綠園道、得正、一芳水果茶、嘉鴻遊艇...等，專案類型豐富，此期間不少專案針對 WordPress 進行完全客製化開發，亦有許多專案採用前後端分離的 Headless WordPress + GraphQL + Next.js 的設計" />
 
           <WorkBlock
           className="mb-8"
@@ -164,18 +168,32 @@ export default function Home(): ReactNode {
                 <Heading as="h2" className="!text-white !mb-0">Skills</Heading>
                 <hr className="border-white !mt-2 !mb-3" />
                 <div className="flex flex-wrap gap-x-2 gap-y-3 text-white text-[14px]">
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">JavaScript</div>
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">TypeScript</div>
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">Node.js</div>
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">Vue</div>
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">React</div>
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">Next.js</div>
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">Nuxt.js</div>
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">HTML</div>
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">CSS</div>
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">Sass / SCSS</div>
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">Vite</div>
-                  <div className="border border-gray-400 rounded px-1.5 py-1 leading-none">Webpack</div>
+                  {
+                    [
+                      'JavaScript',
+                      'TypeScript',
+                      'Node.js',
+                      'Vue',
+                      'React',
+                      'Next.js',
+                      'Nuxt.js',
+                      'HTML',
+                      'CSS',
+                      'Sass / SCSS',
+                      'TailwindCSS',
+                      'Motion',
+                      'GSAP',
+                      'Fabric.js',
+                      'Vite',
+                      'Webpack',
+                      'RESTful API',
+                      'GraphQL',
+                      'WordPress',
+                      'Headless WordPress',
+                    ].map((skillName, index)=>{
+                      return <Skill name={skillName} key={index}/>
+                    })
+                  }
                 </div>
               </div>
 
